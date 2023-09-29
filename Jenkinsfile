@@ -2,7 +2,7 @@ pipeline {
     // Directives
     agent any
     tools {
-        maven 'maven'
+        maven 'maven 3.9.4:java17'
     }
 
     stages {
