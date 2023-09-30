@@ -32,7 +32,7 @@ pipeline {
         // temporary stage 3a : print environments variables
         stage('Print Environment Variables') {
             steps {
-                echo "ArtifactId is '${$ArtifactId}'"
+                echo "ArtifactId is '${ArtifactId}'"
                 echo "Version is '${Version}'"
                 echo "GroupId is '${GroupId}'"
                 echo "Name is '${Name}'"
