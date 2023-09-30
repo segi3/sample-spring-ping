@@ -43,17 +43,17 @@ pipeline {
         stage('Publish') {
             steps {
                 nexusArtifactUploader artifacts: [[
-                    artifactId: 'demo',
+                    artifactId: '${ArtifactId}',
                     classifier: '',
                     file:'target/demo-0.0.4-SNAPSHOT.war',
                     type: 'war'
                 ]],
-                credentialsId: '92392516-babb-4782-af42-f2945db4e328', groupId: 'org.springframework.boot',
+                credentialsId: '92392516-babb-4782-af42-f2945db4e328', groupId: '${GroupId}',
                 nexusUrl: '172.20.10.124:8081',
                 nexusVersion: 'nexus3',
                 protocol: 'http',
                 repository: 'SPRING-SNAPSHOT',
-                version: '0.0.4-SNAPSHOT'
+                version: '${Version}'
             }
         }
 
