@@ -19,7 +19,7 @@ public class BaseController {
     }
 
     @GetMapping(value = "ping")
-    ResponseEntity<?> create () {
+    ResponseEntity<?> ping () {
         return  ResponseEntity
                 .status(HttpStatus.OK)
                 .contentType(MediaType.APPLICATION_JSON)
