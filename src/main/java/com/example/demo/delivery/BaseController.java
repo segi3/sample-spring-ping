@@ -17,4 +17,12 @@ public class BaseController {
                 .contentType(MediaType.APPLICATION_JSON)
                 .body("Hello, world");
     }
+
+    @GetMapping(value = "ping")
+    ResponseEntity<?> create () {
+        return  ResponseEntity
+                .status(HttpStatus.OK)
+                .contentType(MediaType.APPLICATION_JSON)
+                .body("Pong!");
+    }
 }
